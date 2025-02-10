@@ -1,4 +1,4 @@
-# Data-Visualization-Team-2
+# Data-Visualization-CurryPasta
 
 *Data Visualization Repository For Team "CurryPasta"*
 
