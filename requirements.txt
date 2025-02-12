@@ -1,3 +1,7 @@
 pandas
 pydot
 networkx
+ipykernel
+matplotlib
+graphviz
+#pygraphviz
