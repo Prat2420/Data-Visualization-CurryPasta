@@ -8,9 +8,8 @@
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
     - [1. Clone the Repository](#1-clone-the-repository)
-    - [2. Create and Activate the Conda Environment](#2-create-and-activate-the-conda-environment)
-        - [Option A: Using `environment.yml`](#option-a-using-environmentyml)
-        - [Option B: Using `requirements.txt`](#option-b-using-requirementstxt)
+    - [2. Create and Activate the Virtual Environment](#2-create-and-activate-the-virtual-environment)
+        - [Option A: Using `requirements.txt`](#option-a-using-requirementstxt)
     - [3. Verify the Installation](#3-verify-the-installation)
     - [4. Updating Packages in the Environment](#4-updating-packages-in-the-environment)
         - [Example: Adding a New Package](#example-adding-a-new-package)
@@ -33,7 +32,7 @@
 
 Before diving in, ensure you have the following installed:
 
-- **Anaconda or Miniconda**: [Download here](https://docs.conda.io/en/latest/miniconda.html)
+- **Python 3.11.5**: [Download here](https://www.python.org/downloads/)
 - **Git**: [Download here](https://git-scm.com/downloads)
 
 ---
@@ -53,48 +52,37 @@ cd Data-Visualization-Team-2/
 
 ---
 
-### 2. Create and Activate the Conda Environment 'data_vis_env'
+### 2. Create and Activate the Virtual Environment
 
-#### Option A: Using `environment.yml`
+#### Option A: Using `requirements.txt`
 
-This method ensures all dependencies are installed exactly as specified.
-
-1. **Create the environment**:
+1. **Create the virtual environment**:
 
     ```bash
-    conda env create -f environment.yml
+    python3.11 -m venv my_env
     ```
 
-2. **Activate the environment**:
+2. **Activate the virtual environment**:
 
-    ```bash
-    conda activate data_vis_env
-    ```
+    - On **Windows**:
+        ```bash
+        my_env\Scripts\activate
+        ```
 
-    *The environment name is defined in the `environment.yml` file. In this project, it's called "data_vis_env"*
+    - On **macOS and Linux**:
+        ```bash
+        source my_env/bin/activate
+        ```
 
-#### Option B: Using `requirements.txt`
-
-If you prefer or need to use `pip`, follow these steps:
-
-1. **Create a new environment** (optional but recommended):
-
-    ```bash
-    conda create -n data_vis_env python=3.11.5
-    conda activate data_vis_env
-    ```
-
-2. **Install dependencies**:
+3. **Install dependencies**:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-
 ---
 
 ### 3. Verify the Installation
-<<<<<<<<<<----to be updated---->>>>>>>>>>>>>>
 
 Ensure that everything is set up properly:
 
@@ -125,9 +113,8 @@ Suppose you need to add the package `pydot` to your environment.
 0. **Activate the Environment**
 
     ```bash
-    conda activate data_vis_env
+    source my_env/bin/activate
     ```
-
 
 1. **Add the Package to `requirements.txt`**
 
@@ -145,25 +132,7 @@ Suppose you need to add the package `pydot` to your environment.
     pip install -r requirements.txt
     ```
 
-3. **Export the Updated Environment**
-
-    Update the `environment.yml` file to reflect the new package:
-
-    ```bash
-    conda env export > environment.yml
-    ```
-
-4. **Update the Conda Environment**
-
-    Apply the changes to ensure the conda environment matches the `environment.yml`:
-
-    ```bash
-    conda env update --file environment.yml --prune
-    ```
-
-    *The `--prune` flag removes any packages not listed in the `environment.yml`.*
-
-5. **Verify the Package is Installed**
+3. **Verify the Package is Installed**
 
     Check that `pydot` is now available in your environment:
 
@@ -173,13 +142,21 @@ Suppose you need to add the package `pydot` to your environment.
 
     *You should see `pydot` listed among the installed packages.*
 
+4. **Commit the New Version of the Requirements File**
+
+    Ensure the updated `requirements.txt` file is committed to the repository:
+
+    ```bash
+    git add requirements.txt
+    git commit -m "Updated requirements.txt with new package pydot"
+    git push
+    ```
+
 ---
 
 ## Usage
-<<<<<<<<<<----to be updated---->>>>>>>>>>>>>>
-This is a user guide to use the project....
 
-This could include:
+This is a user guide to use the project. This could include:
 
 - Running scripts
 - Sample commands
@@ -194,34 +171,30 @@ python your_script.py --option value
 ---
 
 ## Additional Help
-<<<<<<<<<<----to be updated---->>>>>>>>>>>>>>
+
 ### Deactivating the Environment
 
 When you're done working with the environment, you can deactivate it:
 
 ```bash
-conda deactivate
+deactivate
 ```
 
 ### Removing the Environment
 
-To remove the environment entirely:
-
-```bash
-conda remove --name your-env-name --all
-```
+To remove the environment entirely, simply delete the directory `my_env`.
 
 ---
 
 ## Troubleshooting
-<<<<<<<<<<----to be updated---->>>>>>>>>>>>>>
+
 **Common Issues and Solutions**
 
 - **Issue**: `Environment already exists.`
   - **Solution**: Use a different environment name or remove the existing one.
 
 - **Issue**: `Package conflicts during installation.`
-  - **Solution**: Ensure your conda version is up to date and consider creating a fresh environment.
+  - **Solution**: Ensure your Python version is up to date and consider creating a fresh environment.
 
 - **Issue**: `New package not found after installation.`
   - **Solution**: Verify that you're in the correct environment and that the installation steps were followed correctly.
@@ -229,7 +202,7 @@ conda remove --name your-env-name --all
 ---
 
 ## Acknowledgments
-<<<<<<<<<<----to be updated---->>>>>>>>>>>>>>
+
 *List of resources, inspirations, or collaborators.*
 
 ---

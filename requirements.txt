@@ -4,4 +4,3 @@ networkx
 ipykernel
 matplotlib
 graphviz
-#pygraphviz
