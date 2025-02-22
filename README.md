@@ -46,8 +46,8 @@ Follow these steps to get your environment up and running.
 Start by cloning the repository to your local machine:
 
 ```bash
-git clone https://github.com/Prat2420/Data-Visualization-Team-2.git
-cd Data-Visualization-Team-2/
+https://github.com/Prat2420/Data-Visualization-CurryPasta.git
+cd Data-Visualization-CurryPasta/
 ```
 
 ---
