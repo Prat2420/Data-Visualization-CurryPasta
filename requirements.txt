@@ -5,3 +5,4 @@ ipykernel
 matplotlib
 graphviz
 scipy
+scikit-learn
