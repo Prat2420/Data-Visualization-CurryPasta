@@ -6,3 +6,12 @@ matplotlib
 graphviz
 scipy
 scikit-learn
+matplotlib
+random
+re
+math
+numpy
+graphviz
+pathlib
+collections
+os
