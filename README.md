@@ -10,15 +10,10 @@
     - [1. Clone the Repository](#1-clone-the-repository)
     - [2. Create and Activate the Virtual Environment](#2-create-and-activate-the-virtual-environment)
         - [Option A: Using `requirements.txt`](#option-a-using-requirementstxt)
-    - [3. Verify the Installation](#3-verify-the-installation)
-    - [4. Updating Packages in the Environment](#4-updating-packages-in-the-environment)
+    - [3. Updating Packages in the Environment](#3-updating-packages-in-the-environment)
         - [Example: Adding a New Package](#example-adding-a-new-package)
 4. [Usage](#usage)
-5. [Additional Help](#additional-help)
-    - [Deactivating the Environment](#deactivating-the-environment)
-    - [Removing the Environment](#removing-the-environment)
-6. [Troubleshooting](#troubleshooting)
-7. [Acknowledgments](#acknowledgments)
+
 
 ---
 
@@ -82,25 +77,7 @@ cd Data-Visualization-CurryPasta/
 
 ---
 
-### 3. Verify the Installation
-
-Ensure that everything is set up properly:
-
-```bash
-python your_main_script.py
-```
-
-*Replace `your_main_script.py` with the entry point of your application.*
-
-If your project includes tests, run them to confirm all is well:
-
-```bash
-pytest
-```
-
----
-
-### 4. Updating Packages in the Environment
+### 3. Updating Packages in the Environment
 
 As the project evolves, we might need to add new packages to our environment. Below is the process to update the list of packages, ensuring everyone stays in sync.
 
@@ -156,53 +133,5 @@ Suppose you need to add the package `pydot` to your environment.
 
 ## Usage
 
-This is a user guide to use the project. This could include:
+To use the implemented steps of the project, go to the Notebooks folder and run either individual step notebooks (step_1.ipynb, step_2.ipynb, etc.) or the comprehensive all_in_one_final.ipynb that contains the most up-to-date implementation of all visualization techniques.
 
-- Running scripts
-- Sample commands
-- Expected outputs
-
-**Example**:
-
-```bash
-python your_script.py --option value
-```
-
----
-
-## Additional Help
-
-### Deactivating the Environment
-
-When you're done working with the environment, you can deactivate it:
-
-```bash
-deactivate
-```
-
-### Removing the Environment
-
-To remove the environment entirely, simply delete the directory `my_env`.
-
----
-
-## Troubleshooting
-
-**Common Issues and Solutions**
-
-- **Issue**: `Environment already exists.`
-  - **Solution**: Use a different environment name or remove the existing one.
-
-- **Issue**: `Package conflicts during installation.`
-  - **Solution**: Ensure your Python version is up to date and consider creating a fresh environment.
-
-- **Issue**: `New package not found after installation.`
-  - **Solution**: Verify that you're in the correct environment and that the installation steps were followed correctly.
-
----
-
-## Acknowledgments
-
-*List of resources, inspirations, or collaborators.*
-
----
